@@ -789,23 +789,26 @@ color: var(--text-hover-color);
 
 /* Make icon larger and aligned */
 .desk-sidebar .standard-sidebar-item svg.icon-md {
-  height: 32px; /* increased from 24px */
-  width: 32px;
-  padding: 6px;
-  background-color: transparent;
-  border-radius: 50%;
-  flex-shrink: 0; /* prevent it from shrinking */
+  height: 32px !important; /* Increased from 24px */
+  width: 32px !important; /* Increased from 24px */
+  padding: 6px !important; /* Increased padding for better icon visibility */
+  margin: 0 !important;
+  flex-shrink: 0 !important;
 }
 
 /* Text beside icon */
 .desk-sidebar .standard-sidebar-item a {
-  font-size: 18px;
-  color: var(--text-color-2);
-  text-decoration: none;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  flex-grow: 1;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important; /* Increased gap for better spacing with larger icons */
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 16px !important; /* Increased from 14px */
+  font-weight: 500 !important; /* Added medium font weight for better visibility */
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 /* Hover & Active */
@@ -813,12 +816,13 @@ color: var(--text-hover-color);
 .desk-sidebar .standard-sidebar-item.selected {
   background-color: var(--sidebar-hover-bg, #0074bf1a);
   color: var(--main-text-color);
+  transform: translateX(4px); /* Slight movement on hover for better interaction feedback */
 }
 
 .desk-sidebar .standard-sidebar-item:hover a,
 .desk-sidebar .standard-sidebar-item.selected a {
   color: var(--main-text-color);
-  font-weight: 500;
+  font-weight: 600 !important; /* Bolder text on hover/selected */
 }
 
 /* Fix right padding/gap */
@@ -892,16 +896,16 @@ body[data-layout="full-width"] .layout-main-section {
 .desk-sidebar .standard-sidebar-item {
   display: flex !important;
   align-items: center !important;
-  padding: 8px 16px !important;
+  padding: 10px 16px !important; /* Increased vertical padding */
   margin: 4px 8px !important;
   border-radius: 6px !important;
   transition: all 0.2s ease !important;
 }
 
 .desk-sidebar .standard-sidebar-item svg.icon-md {
-  height: 24px !important;
-  width: 24px !important;
-  padding: 4px !important;
+  height: 32px !important; /* Increased from 24px */
+  width: 32px !important; /* Increased from 24px */
+  padding: 6px !important; /* Increased padding for better icon visibility */
   margin: 0 !important;
   flex-shrink: 0 !important;
 }
@@ -909,11 +913,12 @@ body[data-layout="full-width"] .layout-main-section {
 .desk-sidebar .standard-sidebar-item a {
   display: flex !important;
   align-items: center !important;
-  gap: 10px !important;
+  gap: 12px !important; /* Increased gap for better spacing with larger icons */
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
-  font-size: 14px !important;
+  font-size: 16px !important; /* Increased from 14px */
+  font-weight: 500 !important; /* Added medium font weight for better visibility */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
