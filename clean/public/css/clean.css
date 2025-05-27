@@ -1002,30 +1002,46 @@ body[data-layout="full-width"] .layout-main-section {
 
 /* Dark mode search improvements */
 [data-theme="dark"] .search-bar .awesomplete input {
-	background-color: #111 !important;
-	color: #fff !important;
-	border: 1px solid #333 !important;
+    background-color: #111 !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+}
+
+[data-theme="dark"] .search-bar .awesomplete input::placeholder {
+    color: #ffffff !important;
 }
 
 [data-theme="dark"] .search-bar .awesomplete input:focus,
 [data-theme="dark"] .search-bar .awesomplete input:hover {
-	background-color: #232323 !important;
-	color: #fff !important;
+    background-color: #333 !important;
+    color: #ffffff !important;
 }
 
 [data-theme="dark"] .awesomplete [role="listbox"] {
-	background-color: #111 !important;
-	border: 1px solid #333 !important;
+    background-color: #111 !important;
+    border: 1px solid #333 !important;
 }
 
 [data-theme="dark"] .awesomplete [role="option"] {
-	color: #fff !important;
-	background-color: transparent !important;
+    color: #ffffff !important;
+    background-color: #111 !important;
 }
 
 [data-theme="dark"] .awesomplete [role="option"]:hover {
-	background-color: #232323 !important;
-	color: #fff !important;
+    background-color: #333 !important;
+    color: #ffffff !important;
+}
+
+/* Force white text in dark mode search */
+[data-theme="dark"] .search-bar input,
+[data-theme="dark"] .search-bar .awesomplete input,
+[data-theme="dark"] .search-bar .awesomplete [role="option"] {
+    color: #ffffff !important;
+}
+
+/* Override any other styles that might affect search text color */
+[data-theme="dark"] .search-bar * {
+    color: #ffffff !important;
 }
 
 /* Sidebar Text Improvements */
@@ -1080,30 +1096,6 @@ body[data-layout="full-width"] .layout-main-section {
 }
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a,
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
-	color: #fff !important;
-}
-
-/* --- Search Bar: Dark mode fixes --- */
-[data-theme="dark"] .search-bar .awesomplete input {
-	background-color: #111 !important;
-	color: #fff !important;
-	border: 1px solid #333 !important;
-}
-[data-theme="dark"] .search-bar .awesomplete input:focus,
-[data-theme="dark"] .search-bar .awesomplete input:hover {
-	background-color: #232323 !important;
-	color: #fff !important;
-}
-[data-theme="dark"] .awesomplete [role="listbox"] {
-	background-color: #111 !important;
-	border: 1px solid #333 !important;
-}
-[data-theme="dark"] .awesomplete [role="option"] {
-	color: #fff !important;
-	background-color: transparent !important;
-}
-[data-theme="dark"] .awesomplete [role="option"]:hover {
-	background-color: #232323 !important;
 	color: #fff !important;
 }
 
