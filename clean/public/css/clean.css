@@ -16,7 +16,7 @@
 	--table-border-color: #171717;
 	--text-color-2: #111111;
 	--svg-bg: #ffffff;
-	--glass-effect-bg: rgba(255, 255, 255, 0.527);
+	--glass-effect-bg: rgb(184, 184, 184);
 }
 
 [data-theme="dark"]{
