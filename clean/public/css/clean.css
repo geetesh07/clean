@@ -1002,29 +1002,71 @@ body[data-layout="full-width"] .layout-main-section {
 
 /* Dark mode search improvements */
 [data-theme="dark"] .search-bar .awesomplete input {
-	background-color: var(--background);
-	color: var(--text-color-2);
+	background-color: #23272e !important;
+	color: #fff !important;
 	border: 1px solid var(--table-border-color);
 }
 
 [data-theme="dark"] .search-bar .awesomplete input:focus,
 [data-theme="dark"] .search-bar .awesomplete input:hover {
-	background-color: var(--sidebar-hover-bg);
-	color: var(--text-color-2);
+	background-color: #2a2e36 !important;
+	color: #fff !important;
 }
 
 [data-theme="dark"] .awesomplete [role="listbox"] {
-	background-color: var(--background);
+	background-color: #23272e !important;
 	border: 1px solid var(--table-border-color);
 }
 
 [data-theme="dark"] .awesomplete [role="option"] {
-	color: var(--text-color-2);
+	color: #fff !important;
+	background-color: transparent !important;
 }
 
 [data-theme="dark"] .awesomplete [role="option"]:hover {
-	background-color: var(--sidebar-hover-bg);
-	color: var(--text-color-2);
+	background-color: #0074bf !important;
+	color: #fff !important;
+}
+
+/* Sidebar Text Improvements */
+.desk-sidebar .standard-sidebar-item a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 18px; /* Increased from 14px */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+	color: var(--text-color-2) !important;
+	font-weight: 500;
+	letter-spacing: 0.01em;
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item a {
+	color: #fff !important;
+}
+
+.desk-sidebar .standard-sidebar-item.selected a,
+.desk-sidebar .standard-sidebar-item:hover a {
+	color: var(--main-text-color) !important;
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a,
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
+	color: #fff !important;
+}
+
+/* Fix for icon alignment */
+.desk-sidebar .standard-sidebar-item svg.icon-md {
+	height: 22px;
+	width: 22px;
+	padding: 2px;
+	margin-right: 4px;
+	color: inherit;
 }
 
   
