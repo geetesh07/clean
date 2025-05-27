@@ -945,41 +945,55 @@ body[data-layout="full-width"] .layout-main-section {
 .desk-sidebar .standard-sidebar-item {
   display: flex !important;
   align-items: center !important;
-  padding: 10px 16px !important; /* Increased vertical padding */
+  padding: 10px 16px !important;
   margin: 4px 8px !important;
   border-radius: 6px !important;
   transition: all 0.2s ease !important;
-}
-
-.desk-sidebar .standard-sidebar-item svg.icon-md {
-  height: 32px !important; /* Increased from 24px */
-  width: 32px !important; /* Increased from 24px */
-  padding: 6px !important; /* Increased padding for better icon visibility */
-  margin: 0 !important;
-  flex-shrink: 0 !important;
+  color: #171717 !important; /* Dark text for light mode */
 }
 
 .desk-sidebar .standard-sidebar-item a {
   display: flex !important;
   align-items: center !important;
-  gap: 12px !important; /* Increased gap for better spacing with larger icons */
+  gap: 12px !important;
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
-  font-size: 16px !important; /* Increased from 14px */
-  font-weight: 500 !important; /* Added medium font weight for better visibility */
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: #171717 !important; /* Dark text for light mode */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
 
-.desk-sidebar .standard-sidebar-item .item-anchor {
-  display: flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  width: 100% !important;
-  padding: 0 !important;
+/* Hover & Active states for light mode */
+.desk-sidebar .standard-sidebar-item:hover,
+.desk-sidebar .standard-sidebar-item.selected {
+  background-color: var(--sidebar-select-color-2) !important;
+  color: var(--main-text-color) !important;
+  transform: translateX(4px);
+}
+
+.desk-sidebar .standard-sidebar-item:hover a,
+.desk-sidebar .standard-sidebar-item.selected a {
+  color: var(--main-text-color) !important;
+  font-weight: 600 !important;
+}
+
+/* Icon colors for light mode */
+.desk-sidebar .standard-sidebar-item svg.icon-md {
+  height: 32px !important;
+  width: 32px !important;
+  padding: 6px !important;
   margin: 0 !important;
+  flex-shrink: 0 !important;
+  color: #171717 !important; /* Dark icon color for light mode */
+}
+
+.desk-sidebar .standard-sidebar-item:hover svg.icon-md,
+.desk-sidebar .standard-sidebar-item.selected svg.icon-md {
+  color: var(--main-text-color) !important; /* Blue icon color on hover/selected */
 }
 
 /* Remove any conflicting styles */
