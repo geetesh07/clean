@@ -1002,20 +1002,20 @@ body[data-layout="full-width"] .layout-main-section {
 
 /* Dark mode search improvements */
 [data-theme="dark"] .search-bar .awesomplete input {
-	background-color: #23272e !important;
+	background-color: #111 !important;
 	color: #fff !important;
-	border: 1px solid var(--table-border-color);
+	border: 1px solid #333 !important;
 }
 
 [data-theme="dark"] .search-bar .awesomplete input:focus,
 [data-theme="dark"] .search-bar .awesomplete input:hover {
-	background-color: #2a2e36 !important;
+	background-color: #232323 !important;
 	color: #fff !important;
 }
 
 [data-theme="dark"] .awesomplete [role="listbox"] {
-	background-color: #23272e !important;
-	border: 1px solid var(--table-border-color);
+	background-color: #111 !important;
+	border: 1px solid #333 !important;
 }
 
 [data-theme="dark"] .awesomplete [role="option"] {
@@ -1024,7 +1024,7 @@ body[data-layout="full-width"] .layout-main-section {
 }
 
 [data-theme="dark"] .awesomplete [role="option"]:hover {
-	background-color: #0074bf !important;
+	background-color: #232323 !important;
 	color: #fff !important;
 }
 
@@ -1067,6 +1067,44 @@ body[data-layout="full-width"] .layout-main-section {
 	padding: 2px;
 	margin-right: 4px;
 	color: inherit;
+}
+
+/* --- Sidebar Text: Always visible in dark mode --- */
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item a,
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item span {
+	color: #fff !important;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 0.01em;
+	text-align: left;
+}
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a,
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
+	color: #fff !important;
+}
+
+/* --- Search Bar: Dark mode fixes --- */
+[data-theme="dark"] .search-bar .awesomplete input {
+	background-color: #111 !important;
+	color: #fff !important;
+	border: 1px solid #333 !important;
+}
+[data-theme="dark"] .search-bar .awesomplete input:focus,
+[data-theme="dark"] .search-bar .awesomplete input:hover {
+	background-color: #232323 !important;
+	color: #fff !important;
+}
+[data-theme="dark"] .awesomplete [role="listbox"] {
+	background-color: #111 !important;
+	border: 1px solid #333 !important;
+}
+[data-theme="dark"] .awesomplete [role="option"] {
+	color: #fff !important;
+	background-color: transparent !important;
+}
+[data-theme="dark"] .awesomplete [role="option"]:hover {
+	background-color: #232323 !important;
+	color: #fff !important;
 }
 
   
