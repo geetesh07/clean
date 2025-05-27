@@ -932,22 +932,22 @@ body[data-layout="full-width"] .layout-main-section {
 	padding: 8px 12px;
 	margin: 4px 8px;
 	border-radius: 6px;
-	gap: 12px;
+	gap: 8px;
 }
 
 .desk-sidebar .standard-sidebar-item .item-anchor {
 	display: flex;
 	align-items: center;
-	gap: 12px;
+	gap: 8px;
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
 
 .desk-sidebar .standard-sidebar-item svg.icon-md {
-	height: 24px;
-	width: 24px;
-	padding: 4px;
+	height: 20px;
+	width: 20px;
+	padding: 2px;
 	background-color: transparent;
 	border: none;
 	flex-shrink: 0;
@@ -956,7 +956,7 @@ body[data-layout="full-width"] .layout-main-section {
 .desk-sidebar .standard-sidebar-item a {
 	display: flex;
 	align-items: center;
-	gap: 12px;
+	gap: 8px;
 	width: 100%;
 	padding: 0;
 	margin: 0;
@@ -964,17 +964,21 @@ body[data-layout="full-width"] .layout-main-section {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	text-align: left;
 }
 
 .desk-sidebar .standard-sidebar-item a span {
 	overflow: hidden;
 	text-overflow: ellipsis;
+	text-align: left;
+	width: 100%;
 }
 
 /* Fix for workspace header section */
 [data-page-route="Workspaces"] .standard-sidebar-item .item-anchor {
 	flex-direction: row !important;
 	text-align: left !important;
+	justify-content: flex-start !important;
 }
 
 [data-page-route="Workspaces"] .standard-sidebar-item {
@@ -994,6 +998,33 @@ body[data-layout="full-width"] .layout-main-section {
 [data-theme="dark"] .web-sidebar .sidebar-item a:hover {
 	background-color: var(--sidebar-hover-bg);
 	color: #ffffff !important;
+}
+
+/* Dark mode search improvements */
+[data-theme="dark"] .search-bar .awesomplete input {
+	background-color: var(--background);
+	color: var(--text-color-2);
+	border: 1px solid var(--table-border-color);
+}
+
+[data-theme="dark"] .search-bar .awesomplete input:focus,
+[data-theme="dark"] .search-bar .awesomplete input:hover {
+	background-color: var(--sidebar-hover-bg);
+	color: var(--text-color-2);
+}
+
+[data-theme="dark"] .awesomplete [role="listbox"] {
+	background-color: var(--background);
+	border: 1px solid var(--table-border-color);
+}
+
+[data-theme="dark"] .awesomplete [role="option"] {
+	color: var(--text-color-2);
+}
+
+[data-theme="dark"] .awesomplete [role="option"]:hover {
+	background-color: var(--sidebar-hover-bg);
+	color: var(--text-color-2);
 }
 
   
