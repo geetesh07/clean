@@ -22,13 +22,12 @@
 [data-theme="dark"]{
 	--background: #222222;
 	--bg-color:  #171717;
-	--text-hover-color: #ffffff;
+	--text-hover-color: #111111;
 	--table-border-color: #ffffff;
 	--text-color-2: #ffffff;
 	--text-btn-color: #111111;
 	--svg-bg: #111111;
-	--sidebar-hover-bg: rgba(255, 255, 255, 0.1);
-	--card-background: rgba(255, 255, 255, 0.05);
+
 }
 /* login page */
 
@@ -635,7 +634,7 @@ color: var(--text-hover-color);
   }
   .desk-sidebar .standard-sidebar-item:hover{
 	color: var(--text-color-2);
-	background-color: var(--sidebar-select-color-2);
+	background-color: var(--sidebar-select-color);
 
   }
 
@@ -769,78 +768,141 @@ color: var(--text-hover-color);
 }
 
 .desk-sidebar .standard-sidebar-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    margin: 4px 8px;
-    border-radius: 6px;
+  margin: 4px 6px !important;
+  padding: 6px 8px !important;
 }
 
 .desk-sidebar .standard-sidebar-item .item-anchor {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-.desk-sidebar .standard-sidebar-item svg.icon-md {
-    height: 20px;
-    width: 20px;
-    padding: 2px;
-    margin-right: 8px;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
 }
 
 .desk-sidebar .standard-sidebar-item a {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-    color: var(--text-color-2);
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.desk-sidebar .standard-sidebar-item svg.icon-md {
+  height: 24px;
+  width: 24px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+/* Prevent overflow/whitespace */
+.desk-sidebar .standard-sidebar-item a span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+/* Sidebar Items */
+.desk-sidebar .standard-sidebar-item {
+  margin: 4px 10px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  color: var(--text-color-2);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* Container should be a flex row */
+.desk-sidebar .standard-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spacing between icon and text */
+  padding: 10px 16px;
+}
+
+/* Make icon larger and aligned */
+.desk-sidebar .standard-sidebar-item svg.icon-md {
+  height: 32px; /* increased from 24px */
+  width: 32px;
+  padding: 6px;
+  background-color: transparent;
+  border-radius: 50%;
+  flex-shrink: 0; /* prevent it from shrinking */
+}
+
+/* Text beside icon */
+.desk-sidebar .standard-sidebar-item a {
+  font-size: 18px;
+  color: var(--text-color-2);
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+
+/* Hover & Active */
+.desk-sidebar .standard-sidebar-item:hover,
+.desk-sidebar .standard-sidebar-item.selected {
+  background-color: var(--sidebar-hover-bg, #0074bf1a);
+  color: var(--main-text-color);
+}
+
+.desk-sidebar .standard-sidebar-item:hover a,
+.desk-sidebar .standard-sidebar-item.selected a {
+  color: var(--main-text-color);
+  font-weight: 500;
+}
+
+/* Fix right padding/gap */
+.desk-sidebar .standard-sidebar-item .item-anchor {
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+/* Workspace Header Section */
+[data-page-route="Workspaces"] .layout-main .layout-side-section {
+  background-color: var(--background);
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 10px;
+}
+
+/* ---- DARK MODE OVERRIDES ---- */
+[data-theme="dark"] .desk-sidebar {
+  background-color: #1c1c1e;
+  border-right: 1px solid #2c2c2e;
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item {
+  color: #ccc;
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover,
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected {
+  background-color: rgba(0, 116, 191, 0.2);
+  color: #ffffff;
 }
 
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item a {
-    color: #ffffff;
+  color: #ccc;
 }
 
-.desk-sidebar .standard-sidebar-item.selected a,
-.desk-sidebar .standard-sidebar-item:hover a {
-    color: var(--main-text-color);
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a,
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
-    color: #ffffff;
-}
-
-/* Keep the search bar dark mode fixes */
-[data-theme="dark"] .search-bar .awesomplete input {
-    background-color: #111 !important;
-    color: #ffffff !important;
-    border: 1px solid #303030 !important;
-}
-
-[data-theme="dark"] .search-bar .awesomplete input:focus,
-[data-theme="dark"] .search-bar .awesomplete input:hover {
-    background-color: #303030 !important;
-    color: #ffffff !important;
-}
-
-[data-theme="dark"] .awesomplete [role="listbox"] {
-    background-color: #111 !important;
-    border: 1px solid #303030 !important;
-}
-
-[data-theme="dark"] .awesomplete [role="option"] {
-    color: #ffffff !important;
-    background-color: #111 !important;
-}
-
-[data-theme="dark"] .awesomplete [role="option"]:hover {
-    background-color: #303030 !important;
-    color: #ffffff !important;
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a,
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a {
+  color: #ffffff;
 }
 
 /* Full-width layout fix */
@@ -862,252 +924,6 @@ body[data-layout="full-width"] .layout-main-section {
   width: 100% !important;
 }
 
-/* Updated Sidebar Layout */
-.desk-sidebar .standard-sidebar-item {
-	display: flex;
-	align-items: center;
-	padding: 8px 12px;
-	margin: 4px 8px;
-	border-radius: 6px;
-	gap: 8px;
-}
 
-.desk-sidebar .standard-sidebar-item .item-anchor {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
-.desk-sidebar .standard-sidebar-item svg.icon-md {
-	height: 20px;
-	width: 20px;
-	padding: 2px;
-	background-color: transparent;
-	border: none;
-	flex-shrink: 0;
-}
-
-.desk-sidebar .standard-sidebar-item a {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	font-size: 14px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	text-align: left;
-}
-
-.desk-sidebar .standard-sidebar-item a span {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	text-align: left;
-	width: 100%;
-}
-
-/* Fix for workspace header section */
-[data-page-route="Workspaces"] .standard-sidebar-item .item-anchor {
-	flex-direction: row !important;
-	text-align: left !important;
-	justify-content: flex-start !important;
-}
-
-[data-page-route="Workspaces"] .standard-sidebar-item {
-	padding: 8px 12px !important;
-}
-
-/* Dark mode specific hover states */
-[data-theme="dark"] .widget.links-widget-box .link-item:hover,
-[data-theme="dark"] .widget.dashboard-widget-box:hover {
-	background-color: var(--sidebar-hover-bg);
-}
-
-[data-theme="dark"] .form-links .document-link:hover {
-	background-color: var(--sidebar-hover-bg);
-}
-
-[data-theme="dark"] .web-sidebar .sidebar-item a:hover {
-	background-color: var(--sidebar-hover-bg);
-	color: #ffffff !important;
-}
-
-/* Dark mode search improvements */
-[data-theme="dark"] .search-bar .awesomplete input {
-    background-color: #111 !important;
-    color: #ffffff !important;
-    border: 1px solid #303030 !important;
-}
-
-[data-theme="dark"] .search-bar .awesomplete input::placeholder {
-    color: #ffffff !important;
-}
-
-[data-theme="dark"] .search-bar .awesomplete input:focus,
-[data-theme="dark"] .search-bar .awesomplete input:hover {
-    background-color: #303030 !important;
-    color: #ffffff !important;
-}
-
-[data-theme="dark"] .awesomplete [role="listbox"] {
-    background-color: #111 !important;
-    border: 1px solid #303030 !important;
-}
-
-[data-theme="dark"] .awesomplete [role="option"] {
-    color: #ffffff !important;
-    background-color: #111 !important;
-}
-
-[data-theme="dark"] .awesomplete [role="option"]:hover {
-    background-color: #303030 !important;
-    color: #ffffff !important;
-}
-
-/* Force white text in dark mode search */
-[data-theme="dark"] .search-bar input,
-[data-theme="dark"] .search-bar .awesomplete input,
-[data-theme="dark"] .search-bar .awesomplete [role="option"] {
-    color: #ffffff !important;
-}
-
-/* Override any other styles that might affect search text color */
-[data-theme="dark"] .search-bar * {
-    color: #ffffff !important;
-}
-
-/* Sidebar Text Improvements */
-.desk-sidebar .standard-sidebar-item a {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	font-size: 18px; /* Increased from 14px */
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	text-align: left;
-	color: var(--text-color-2) !important;
-	font-weight: 500;
-	letter-spacing: 0.01em;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item a {
-	color: #fff !important;
-}
-
-.desk-sidebar .standard-sidebar-item.selected a,
-.desk-sidebar .standard-sidebar-item:hover a {
-	color: var(--main-text-color) !important;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a,
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
-	color: #fff !important;
-}
-
-/* Fix for icon alignment */
-.desk-sidebar .standard-sidebar-item svg.icon-md {
-	height: 22px;
-	width: 22px;
-	padding: 2px;
-	margin-right: 4px;
-	color: inherit;
-}
-
-/* --- Sidebar Text: Always visible in dark mode --- */
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item a,
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item span {
-	color: #fff !important;
-	font-size: 18px;
-	font-weight: 500;
-	letter-spacing: 0.01em;
-	text-align: left;
-}
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a,
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
-	color: #fff !important;
-}
-
-/* Sidebar Text Fixes */
-.desk-sidebar .standard-sidebar-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 12px;
-    margin: 4px 8px;
-    border-radius: 6px;
-    gap: 8px;
-}
-
-.desk-sidebar .standard-sidebar-item .item-anchor {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-}
-
-.desk-sidebar .standard-sidebar-item a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: left;
-    color: var(--text-color-2);
-}
-
-.desk-sidebar .standard-sidebar-item a span {
-    display: block;
-    text-align: left;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-/* Dark mode sidebar text */
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item a {
-    color: #ffffff !important;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item a span {
-    color: #ffffff !important;
-}
-
-/* Fix workspace header section */
-[data-page-route="Workspaces"] .standard-sidebar-item .item-anchor {
-    flex-direction: row !important;
-    text-align: left !important;
-    justify-content: flex-start !important;
-}
-
-[data-page-route="Workspaces"] .standard-sidebar-item {
-    padding: 8px 12px !important;
-}
-
-/* Ensure text is visible in all states */
-.desk-sidebar .standard-sidebar-item.selected a,
-.desk-sidebar .standard-sidebar-item:hover a {
-    color: var(--main-text-color) !important;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a,
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
-    color: #ffffff !important;
-}
 
   
