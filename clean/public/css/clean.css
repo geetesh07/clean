@@ -126,15 +126,15 @@
 }
 
 .search-bar .awesomplete input{
-	background-color: var(--bg-color);
+	background-color: var(--btn-primary-2);
 	border: 1px solid var(--table-border-color-2);
-	color: var(--text-color-2);
+	color: var(--text-btn-color);
 	transition: all 0.2s ease;
 }
 
 .search-bar .awesomplete input:focus,
 .search-bar .awesomplete input:hover {
-	background-color: var(--sidebar-select-color-2);
+	background-color: var(--btn-primary-2);
 	border-color: var(--main-text-color);
 	box-shadow: 0 0 0 2px var(--main-text-color);
 }
