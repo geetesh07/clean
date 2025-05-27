@@ -1,9 +1,9 @@
 app_name = "clean"
-app_title = "CLean"
-app_publisher = "CLEAN"
-app_description = "CLEAN"
-app_email = "mail@ntechnosolution.com"
-app_license = "mit"
+app_title = "Clean"
+app_publisher = "Clean"
+app_description = "Clean"
+app_email = "Clean@gmail.com"
+app_license = "unlicense"
 
 # Apps
 # ------------------
@@ -15,7 +15,7 @@ app_license = "mit"
 # 	{
 # 		"name": "clean",
 # 		"logo": "/assets/clean/logo.png",
-# 		"title": "CLean",
+# 		"title": "Clean",
 # 		"route": "/clean",
 # 		"has_permission": "clean.api.permission.has_app_permission"
 # 	}
