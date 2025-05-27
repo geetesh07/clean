@@ -1099,4 +1099,78 @@ body[data-layout="full-width"] .layout-main-section {
 	color: #fff !important;
 }
 
+/* Sidebar Text Fixes */
+.desk-sidebar .standard-sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    margin: 4px 8px;
+    border-radius: 6px;
+    gap: 8px;
+}
+
+.desk-sidebar .standard-sidebar-item .item-anchor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.desk-sidebar .standard-sidebar-item a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    color: var(--text-color-2);
+}
+
+.desk-sidebar .standard-sidebar-item a span {
+    display: block;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Dark mode sidebar text */
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item a {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item a span {
+    color: #ffffff !important;
+}
+
+/* Fix workspace header section */
+[data-page-route="Workspaces"] .standard-sidebar-item .item-anchor {
+    flex-direction: row !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+}
+
+[data-page-route="Workspaces"] .standard-sidebar-item {
+    padding: 8px 12px !important;
+}
+
+/* Ensure text is visible in all states */
+.desk-sidebar .standard-sidebar-item.selected a,
+.desk-sidebar .standard-sidebar-item:hover a {
+    color: var(--main-text-color) !important;
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a,
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
+    color: #ffffff !important;
+}
+
   
