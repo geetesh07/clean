@@ -22,12 +22,13 @@
 [data-theme="dark"]{
 	--background: #222222;
 	--bg-color:  #171717;
-	--text-hover-color: #111111;
+	--text-hover-color: #ffffff;
 	--table-border-color: #ffffff;
 	--text-color-2: #ffffff;
 	--text-btn-color: #111111;
 	--svg-bg: #111111;
-
+	--sidebar-hover-bg: rgba(255, 255, 255, 0.1);
+	--card-background: rgba(255, 255, 255, 0.05);
 }
 /* login page */
 
@@ -634,7 +635,7 @@ color: var(--text-hover-color);
   }
   .desk-sidebar .standard-sidebar-item:hover{
 	color: var(--text-color-2);
-	background-color: var(--sidebar-select-color);
+	background-color: var(--sidebar-select-color-2);
 
   }
 
@@ -924,6 +925,75 @@ body[data-layout="full-width"] .layout-main-section {
   width: 100% !important;
 }
 
+/* Updated Sidebar Layout */
+.desk-sidebar .standard-sidebar-item {
+	display: flex;
+	align-items: center;
+	padding: 8px 12px;
+	margin: 4px 8px;
+	border-radius: 6px;
+	gap: 12px;
+}
 
+.desk-sidebar .standard-sidebar-item .item-anchor {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.desk-sidebar .standard-sidebar-item svg.icon-md {
+	height: 24px;
+	width: 24px;
+	padding: 4px;
+	background-color: transparent;
+	border: none;
+	flex-shrink: 0;
+}
+
+.desk-sidebar .standard-sidebar-item a {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.desk-sidebar .standard-sidebar-item a span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Fix for workspace header section */
+[data-page-route="Workspaces"] .standard-sidebar-item .item-anchor {
+	flex-direction: row !important;
+	text-align: left !important;
+}
+
+[data-page-route="Workspaces"] .standard-sidebar-item {
+	padding: 8px 12px !important;
+}
+
+/* Dark mode specific hover states */
+[data-theme="dark"] .widget.links-widget-box .link-item:hover,
+[data-theme="dark"] .widget.dashboard-widget-box:hover {
+	background-color: var(--sidebar-hover-bg);
+}
+
+[data-theme="dark"] .form-links .document-link:hover {
+	background-color: var(--sidebar-hover-bg);
+}
+
+[data-theme="dark"] .web-sidebar .sidebar-item a:hover {
+	background-color: var(--sidebar-hover-bg);
+	color: #ffffff !important;
+}
 
   
