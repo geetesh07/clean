@@ -1,7 +1,7 @@
 :root {
 	--bg-color:  #e5e8eb;
 	--btn-primary-2: #5e5e5e;
-	--btn-secondary-2: #1a1a1b9c;
+	--btn-secondary-2: #171717;
 	--secondary-2: #4a8ce2;
 	--navbar-bg-2: #171717;
 	--text-btn-color: white;
@@ -13,7 +13,7 @@
 	--card-background: #0073bf1c;
 	--main-text-color: #0074bf;
 	--background: #ffffff;
-	--table-border-color: #000000;
+	--table-border-color: #171717;
 	--text-color-2: #111111;
 	--svg-bg: #ffffff;
 	--glass-effect-bg: rgba(255, 255, 255, 0.527);
@@ -21,7 +21,7 @@
 
 [data-theme="dark"]{
 	--background: #222222;
-	--bg-color:  #000000;
+	--bg-color:  #171717;
 	--text-hover-color: #111111;
 	--table-border-color: #ffffff;
 	--text-color-2: #ffffff;
