@@ -127,8 +127,57 @@
 
 .search-bar .awesomplete input{
 	background-color: var(--bg-color);
+	border: 1px solid var(--table-border-color-2);
+	color: var(--text-color-2);
+	transition: all 0.2s ease;
 }
 
+.search-bar .awesomplete input:focus,
+.search-bar .awesomplete input:hover {
+	background-color: var(--sidebar-select-color-2);
+	border-color: var(--main-text-color);
+	box-shadow: 0 0 0 2px var(--main-text-color);
+}
+
+/* Dark Mode Search Bar */
+[data-theme="dark"] .search-bar .awesomplete input {
+	background-color: #2c2c2e;
+	border-color: #3c3c3e;
+	color: #ffffff;
+}
+
+[data-theme="dark"] .search-bar .awesomplete input:focus,
+[data-theme="dark"] .search-bar .awesomplete input:hover {
+	background-color: #3c3c3e;
+	border-color: var(--main-text-color);
+	box-shadow: 0 0 0 2px var(--main-text-color);
+}
+
+/* Search Results Dropdown */
+[data-theme="dark"] .awesomplete [role="listbox"] {
+	background-color: #2c2c2e;
+	border: 1px solid #3c3c3e;
+}
+
+[data-theme="dark"] .awesomplete [role="option"] {
+	color: #ffffff;
+}
+
+[data-theme="dark"] .awesomplete [role="option"]:hover,
+[data-theme="dark"] .awesomplete li:hover {
+	background-color: #3c3c3e;
+	color: var(--main-text-color);
+}
+
+/* Search Icon Color */
+[data-theme="dark"] .search-bar span {
+	color: #ffffff !important;
+}
+
+/* Search Bar Placeholder */
+[data-theme="dark"] .search-bar .awesomplete input::placeholder {
+	color: #888888;
+}
 
 /* PAGE DESIGN */
 
