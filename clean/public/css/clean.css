@@ -958,7 +958,7 @@ body[data-layout="full-width"] .layout-main-section {
   margin: 4px 8px !important;
   border-radius: 6px !important;
   transition: all 0.2s ease !important;
-  color: #171717 !important; /* Dark text for light mode */
+  color:  var(--text-color-2)!important; /* Dark text for light mode */
 }
 
 .desk-sidebar .standard-sidebar-item a {
@@ -970,7 +970,7 @@ body[data-layout="full-width"] .layout-main-section {
   margin: 0 !important;
   font-size: 16px !important;
   font-weight: 500 !important;
-  color: #171717 !important; /* Dark text for light mode */
+  color:  var(--text-color-2)!important; /* Dark text for light mode */
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
