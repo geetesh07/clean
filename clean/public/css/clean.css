@@ -898,22 +898,31 @@ color: var(--text-hover-color);
 }
 
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item {
-  color: #ccc;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover,
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected {
   background-color: rgba(0, 116, 191, 0.2);
-  color: #ffffff;
+  color: var(--main-text-color);
 }
 
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item a {
-  color: #ccc;
+  color: #ffffff;
 }
 
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a,
 [data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected a {
+  color: var(--main-text-color);
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item svg.icon-md {
   color: #ffffff;
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover svg.icon-md,
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected svg.icon-md {
+  color: var(--main-text-color);
 }
 
 /* Full-width layout fix */
