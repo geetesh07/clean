@@ -1034,8 +1034,6 @@ body[data-layout="full-width"] .layout-main-section {
 [data-page-route="Workspaces"] .sidebar-item-container {
   margin: 2px 0 !important;
 }
-<<<<<<< HEAD
-
 /* Modern Card Styles */
 .page-content .layout-main-section {
     background-color: var(--background);
@@ -1671,5 +1669,3 @@ code {
         transform: translateY(0);
     }
 } 
-=======
->>>>>>> 05d7bc3f7b1045b14ec40582566b9fcca6b2127d
