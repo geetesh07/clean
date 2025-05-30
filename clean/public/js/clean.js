@@ -1,101 +1,53 @@
-// Theme Toggle
-function toggleTheme() {
-    const root = document.documentElement;
-    const currentTheme = root.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-}
+// ==== CLEAN.JS (PATCHED FOR DYNAMIC DARK MODE CONSISTENCY AND COMPONENT HOOKING) ====
 
-// Sidebar Management
-function setupSidebar() {
-    const sidebar = document.querySelector('.desk-sidebar');
-    const content = document.querySelector('.page-container');
-    
-    // Toggle Sidebar Collapse
-    function toggleSidebar() {
-        sidebar.classList.toggle('collapsed');
-        content.style.marginLeft = sidebar.classList.contains('collapsed') ? '0' : '220px';
-        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
-    }
-    
-    // Responsive Handling
-    function handleResponsive() {
-        if (window.innerWidth < 768) {
-            sidebar.classList.add('mobile-collapsed');
-            content.style.marginLeft = '0';
-        } else {
-            sidebar.classList.remove('mobile-collapsed');
-            content.style.marginLeft = '220px';
+(function () {
+    // Ensure DOM fully loads
+    document.addEventListener('DOMContentLoaded', function () {
+      const body = document.body;
+  
+      // Utility: Force apply dark class if dark mode is active
+      function applyDarkModeFixes() {
+        if (body.getAttribute('data-theme') === 'dark') {
+          document.querySelectorAll('.form-control, input, textarea, select').forEach(el => {
+            el.style.backgroundColor = '#1f1f1f';
+            el.style.color = '#f0f0f0';
+            el.style.borderColor = '#3c3c3e';
+          });
         }
-    }
-
-    // Event Listeners
-    window.addEventListener('resize', handleResponsive);
-    document.querySelectorAll('.sidebar-toggle').forEach(btn => {
-        btn.addEventListener('click', toggleSidebar);
-    });
-
-    // Initialize
-    handleResponsive();
-    if (localStorage.getItem('sidebarCollapsed') === 'true') toggleSidebar();
-}
-
-// Active Link Management
-function setActiveLinks() {
-    document.querySelectorAll('.desk-sidebar-item').forEach(item => {
-        item.addEventListener('click', function() {
-            document.querySelectorAll('.desk-sidebar-item').forEach(i => i.classList.remove('selected'));
-            this.classList.add('selected');
+      }
+  
+      // Observe theme switch
+      const observer = new MutationObserver(mutations => {
+        for (let mutation of mutations) {
+          if (mutation.attributeName === 'data-theme') {
+            applyDarkModeFixes();
+          }
+        }
+      });
+      observer.observe(body, { attributes: true });
+  
+      // Initial call
+      applyDarkModeFixes();
+  
+      // Patch for Awesomplete dropdowns
+      const fixDropdownStyle = () => {
+        document.querySelectorAll('[role="listbox"]').forEach(listbox => {
+          listbox.style.borderRadius = '8px';
+          listbox.style.boxShadow = '0 4px 8px rgba(0,0,0,0.1)';
+          if (body.getAttribute('data-theme') === 'dark') {
+            listbox.style.backgroundColor = '#2c2c2e';
+            listbox.style.borderColor = '#444';
+          }
         });
+      };
+  
+      // Use MutationObserver for dropdowns as they are dynamically created
+      const dropdownObserver = new MutationObserver(fixDropdownStyle);
+      dropdownObserver.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+  
     });
-}
-
-// Form Enhancements
-function enhanceForms() {
-    document.querySelectorAll('.form-control').forEach(input => {
-        input.addEventListener('focus', () => {
-            input.parentElement.classList.add('focused');
-        });
-        input.addEventListener('blur', () => {
-            input.parentElement.classList.remove('focused');
-        });
-    });
-}
-
-// Initialize Everything
-document.addEventListener('DOMContentLoaded', () => {
-    // Set initial theme
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-
-    // Initialize components
-    setupSidebar();
-    setActiveLinks();
-    enhanceForms();
-
-    // Theme toggle button
-    document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
-});
-
-// Mobile Menu Toggle
-function setupMobileMenu() {
-    const menuToggle = document.createElement('div');
-    menuToggle.className = 'mobile-menu-toggle';
-    menuToggle.innerHTML = '☰';
-    document.body.appendChild(menuToggle);
-
-    menuToggle.addEventListener('click', () => {
-        const sidebar = document.querySelector('.desk-sidebar');
-        sidebar.classList.toggle('show-mobile');
-    });
-}
-
-// Optional: Login Page Enhancements
-function enhanceLoginPage() {
-    if (document.querySelector('[data-path="login"]')) {
-        const container = document.createElement('div');
-        container.className = 'login-animation-container';
-        document.querySelector('#page-login').prepend(container);
-    }
-}
+  });
+  
