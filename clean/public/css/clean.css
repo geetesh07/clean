@@ -117,59 +117,48 @@ body[data-layout="full-width"] .layout-main {
 [data-theme="dark"] .awesomplete li:hover { background-color: #3c3c3e; color: var(--main-text-color); }
 
 /* ========================================
-   BUTTON STYLES - COMPACT & MODERN
+   BUTTON STYLES - MINIMAL OUTLINE
    ======================================== */
 
-.btn, .btn-primary {
+.btn, .btn-primary, .btn-default, .btn-secondary {
+  background: transparent !important;
+  color: #1e293b !important;
+  border: 1px solid #0074bf !important;
   border-radius: 6px !important;
-  border: none !important;
   padding: 6px 14px !important;
   font-size: 14px !important;
   font-weight: 500 !important;
   line-height: 1.4 !important;
-  background: #1e293b !important;
-  color: #ffffff !important;
-  cursor: pointer;
-  outline: none !important;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.2) !important;
-  border: 1px solid transparent !important;
-  min-width: fit-content;
+  transition: all 0.2s ease !important;
+  min-width: fit-content !important;
   margin: 0 4px !important;
+  box-shadow: none !important;
 }
 
-.btn:hover, .btn:focus, .btn-primary:hover, .btn-primary:focus {
-  background: #0f172a !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.25) !important;
-  transform: translateY(-1px) !important;
+.btn:hover, .btn-primary:hover, .btn-default:hover, .btn-secondary:hover,
+.btn:focus, .btn-primary:focus, .btn-default:focus, .btn-secondary:focus {
+  background: rgba(0, 116, 191, 0.04) !important;
+  border-color: #0074bf !important;
+  color: #0074bf !important;
+  box-shadow: 0 0 0 3px rgba(0, 116, 191, 0.1) !important;
 }
 
-/* Secondary/Outline Button */
-.btn-secondary, .btn-outline, .btn-default {
-  background: #ffffff !important;
-  color: #1e293b !important;
-  border: 1px solid #1e293b !important;
-  border-radius: 6px !important;
-  padding: 6px 14px !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.1) !important;
-  margin: 0 4px !important;
+/* Action Buttons (Save, Submit etc) */
+.btn-primary.btn-action {
+  background: #0074bf !important;
+  color: #ffffff !important;
+}
+
+.btn-primary.btn-action:hover {
+  background: #0066a8 !important;
+  color: #ffffff !important;
 }
 
 /* Small Buttons */
 .btn-sm, .btn.btn-sm { 
   padding: 4px 10px !important; 
-  font-size: 13px !important; 
+  font-size: 13px !important;
   border-radius: 4px !important;
-}
-
-/* Large Buttons */
-.btn-lg, .btn.btn-lg { 
-  padding: 8px 20px !important; 
-  font-size: 15px !important; 
-  border-radius: 8px !important;
 }
 
 /* Icon Buttons */
@@ -181,100 +170,76 @@ body[data-layout="full-width"] .layout-main {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin: 0 4px !important;
+  background: transparent !important;
+  border: 1px solid #0074bf !important;
 }
 
-/* ========================================
-   MODERN SIDEBAR STYLING - LIGHTER THEME
-   ======================================== */
-
-.desk-sidebar {
+/* Form Controls and Inputs */
+.form-control, input[type="text"], input[type="number"] {
   background: #f8fafc !important;
-  padding: 1rem !important;
-  border-right: 1px solid rgba(0, 116, 191, 0.1) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
-}
-
-.desk-sidebar .standard-sidebar-item {
-  margin: 4px 0 !important;
+  border: 1px solid #e2e8f0 !important;
   border-radius: 6px !important;
+  padding: 8px 12px !important;
   transition: all 0.2s ease !important;
 }
 
-.desk-sidebar .standard-sidebar-item a {
-  padding: 10px 12px !important;
-  color: #1e293b !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-}
-
-.desk-sidebar .standard-sidebar-item:hover {
-  background: rgba(0, 116, 191, 0.08) !important;
-}
-
-.desk-sidebar .standard-sidebar-item:hover a {
-  color: #0074bf !important;
-}
-
-.desk-sidebar .standard-sidebar-item svg.icon-md {
-  width: 20px !important;
-  height: 20px !important;
-  stroke: #1e293b !important;
-  fill: none !important;
-}
-
-.desk-sidebar .standard-sidebar-item:hover svg.icon-md {
-  stroke: #0074bf !important;
-}
-
-/* Dark theme adjustments */
-[data-theme="dark"] .desk-sidebar {
-  background: #1e293b !important;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item a {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover {
-  background: rgba(255, 255, 255, 0.05) !important;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover a {
-  color: #ffffff !important;
-}
-
-/* ========================================
-   FORMS & INPUTS
-   ======================================== */
-
-.form-control, .frappe-control .ql-editor:not(.read-mode) {
-  box-shadow: 0 0 0 1px rgba(124, 124, 124, 0.25) !important;
-  padding: 20px 10px;
-  border: 1px solid var(--table-border-color-2);
-  background-color: transparent;
-}
-
-.form-control:focus, .form-control:hover { box-shadow: 0 0 0 2px #0074bf80 !important; }
-.form-control:focus { background-color: #0074bf25; }
-
-.ace_editor { box-shadow: 0 0 0 1px rgba(124, 124, 124, 0.25) !important; }
-.ql-editor:focus, .ace_editor:focus { box-shadow: 0 0 0 2px rgba(124, 124, 124, 0.25) !important; }
-
-.frappe-control[data-fieldtype="Select"] .control-input select { height: 42px; }
-.frappe-control[data-fieldtype="Select"] .control-input .select-icon,
-.frappe-control[data-fieldtype="Select"].form-group .select-icon {
-  top: 50%;
-  transform: translateY(-50%);
+.form-control:focus, input[type="text"]:focus, input[type="number"]:focus {
+  border-color: #0074bf !important;
+  box-shadow: 0 0 0 3px rgba(0, 116, 191, 0.1) !important;
+  background: #ffffff !important;
 }
 
 /* Checkboxes */
+.checkbox-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  border: 1px solid #0074bf !important;
+  border-radius: 4px !important;
+  background: transparent !important;
+  cursor: pointer !important;
+}
+
 input[type="checkbox"]:checked {
-  background-color: var(--btn-secondary-2) !important;
-  background-image: url("data:image/svg+xml, <svg viewBox='0 0 8 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 4.00001L2.66667 5.80001L7 1.20001' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"),var(--checkbox-gradient) !important;
+  background: #0074bf !important;
+  border-color: #0074bf !important;
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .btn,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-default,
+[data-theme="dark"] .btn-secondary {
+  color: #e2e8f0 !important;
+  border-color: #0074bf !important;
+}
+
+[data-theme="dark"] .btn:hover,
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-default:hover,
+[data-theme="dark"] .btn-secondary:hover {
+  background: rgba(0, 116, 191, 0.1) !important;
+  color: #0074bf !important;
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="number"] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] input[type="text"]:focus,
+[data-theme="dark"] input[type="number"]:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: #0074bf !important;
 }
 
 /* ========================================
