@@ -117,247 +117,125 @@ body[data-layout="full-width"] .layout-main {
 [data-theme="dark"] .awesomplete li:hover { background-color: #3c3c3e; color: var(--main-text-color); }
 
 /* ========================================
-   PREMIUM BUTTON DESIGN (INSPIRED BY YOUR IMAGE)
+   BUTTON STYLES - COMPACT & MODERN
    ======================================== */
 
-/* Primary Button - Deep Navy */
 .btn, .btn-primary {
-  border-radius: 24px !important;
+  border-radius: 6px !important;
   border: none !important;
-  padding: 12px 24px !important;
-  font-size: 15px !important;
-  font-weight: 600 !important;
+  padding: 6px 14px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
   line-height: 1.4 !important;
   background: #1e293b !important;
   color: #ffffff !important;
   cursor: pointer;
   outline: none !important;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.25) !important;
+  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.2) !important;
   border: 1px solid transparent !important;
   min-width: fit-content;
+  margin: 0 4px !important;
 }
 
 .btn:hover, .btn:focus, .btn-primary:hover, .btn-primary:focus {
   background: #0f172a !important;
   color: #ffffff !important;
-  box-shadow: 0 8px 25px 0 rgba(30, 41, 59, 0.35) !important;
-  transform: translateY(-2px) !important;
-}
-
-.btn:active, .btn-primary:active {
-  background: #0f172a !important;
-  transform: translateY(0px) !important;
-  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.25) !important;
-}
-
-/* Secondary/Outline Button - White with Navy Border */
-.btn-secondary, .btn-outline, .btn-default {
-  background: #ffffff !important;
-  color: #1e293b !important;
-  border: 2px solid #1e293b !important;
-  border-radius: 24px !important;
-  padding: 10px 22px !important;
-  font-size: 15px !important;
-  font-weight: 600 !important;
-  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.1) !important;
-}
-
-.btn-secondary:hover, .btn-outline:hover, .btn-default:hover,
-.btn-secondary:focus, .btn-outline:focus, .btn-default:focus {
-  background: #f8fafc !important;
-  color: #0f172a !important;
-  border-color: #0f172a !important;
-  box-shadow: 0 8px 25px 0 rgba(30, 41, 59, 0.2) !important;
-  transform: translateY(-2px) !important;
-}
-
-/* Light Gray Button (for options/tabs) */
-.btn-light, .btn-option {
-  background: #e2e8f0 !important;
-  color: #475569 !important;
-  border: none !important;
-  border-radius: 20px !important;
-  padding: 10px 20px !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  box-shadow: 0 2px 8px 0 rgba(71, 85, 105, 0.1) !important;
-}
-
-.btn-light:hover, .btn-option:hover,
-.btn-light:focus, .btn-option:focus {
-  background: #cbd5e1 !important;
-  color: #334155 !important;
-  box-shadow: 0 4px 12px 0 rgba(71, 85, 105, 0.15) !important;
+  box-shadow: 0 4px 12px rgba(30, 41, 59, 0.25) !important;
   transform: translateY(-1px) !important;
 }
 
-/* Icon Buttons - Circular */
-.btn-icon, .btn-circle {
-  padding: 12px !important;
-  width: 48px !important;
-  height: 48px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background: #1e293b !important;
-  color: #ffffff !important;
-  border: none !important;
-  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.25) !important;
-}
-
-.btn-icon:hover, .btn-circle:hover,
-.btn-icon:focus, .btn-circle:focus {
-  background: #0f172a !important;
-  box-shadow: 0 8px 25px 0 rgba(30, 41, 59, 0.35) !important;
-  transform: translateY(-2px) !important;
+/* Secondary/Outline Button */
+.btn-secondary, .btn-outline, .btn-default {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 6px !important;
+  padding: 6px 14px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.1) !important;
+  margin: 0 4px !important;
 }
 
 /* Small Buttons */
 .btn-sm, .btn.btn-sm { 
-  padding: 8px 16px !important; 
+  padding: 4px 10px !important; 
   font-size: 13px !important; 
-  border-radius: 18px !important;
-  font-weight: 500 !important;
+  border-radius: 4px !important;
 }
 
 /* Large Buttons */
 .btn-lg, .btn.btn-lg { 
-  padding: 16px 32px !important; 
-  font-size: 17px !important; 
-  border-radius: 28px !important;
-  font-weight: 600 !important;
+  padding: 8px 20px !important; 
+  font-size: 15px !important; 
+  border-radius: 8px !important;
 }
 
-/* Card-style Button */
-.btn-card {
-  background: #ffffff !important;
-  color: #1e293b !important;
-  border: 1px solid #e2e8f0 !important;
-  border-radius: 16px !important;
-  padding: 16px 20px !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  text-align: left !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
-}
-
-.btn-card:hover, .btn-card:focus {
-  background: #f8fafc !important;
-  border-color: #cbd5e1 !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
-  transform: translateY(-2px) !important;
-}
-
-/* Disabled State */
-.btn:disabled, .btn[disabled] {
-  opacity: 0.5 !important;
-  cursor: not-allowed !important;
-  background: #e2e8f0 !important;
-  color: #94a3b8 !important;
-  border-color: #e2e8f0 !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-
-/* Success Button */
-.btn-success {
-  background: #059669 !important;
-  color: #ffffff !important;
-  border-radius: 24px !important;
-  box-shadow: 0 4px 14px 0 rgba(5, 150, 105, 0.25) !important;
-}
-
-.btn-success:hover, .btn-success:focus {
-  background: #047857 !important;
-  box-shadow: 0 8px 25px 0 rgba(5, 150, 105, 0.35) !important;
-  transform: translateY(-2px) !important;
-}
-
-/* Danger Button */
-.btn-danger {
-  background: #dc2626 !important;
-  color: #ffffff !important;
-  border-radius: 24px !important;
-  box-shadow: 0 4px 14px 0 rgba(220, 38, 38, 0.25) !important;
-}
-
-.btn-danger:hover, .btn-danger:focus {
-  background: #b91c1c !important;
-  box-shadow: 0 8px 25px 0 rgba(220, 38, 38, 0.35) !important;
-  transform: translateY(-2px) !important;
+/* Icon Buttons */
+.btn-icon, .btn-circle {
+  padding: 6px !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 4px !important;
 }
 
 /* ========================================
-   SIDEBAR DESIGN
+   MODERN SIDEBAR STYLING
    ======================================== */
 
 .desk-sidebar {
-  width: auto !important;
-  background-color: var(--sidebar-bg-color, #f9fbfc);
-  border-right: 1px solid var(--border-color-light, #e0e6ed);
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.03);
-  padding: 10px 0;
+  background: #1e293b !important;
+  padding: 1rem !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .desk-sidebar .standard-sidebar-item {
-  display: flex !important;
-  align-items: center !important;
-  padding: 10px 16px !important;
-  margin: 4px 8px !important;
+  margin: 4px 0 !important;
   border-radius: 6px !important;
   transition: all 0.2s ease !important;
-  color: var(--text-color-2) !important;
 }
 
 .desk-sidebar .standard-sidebar-item a {
+  padding: 10px 12px !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
-  width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  color: var(--text-color-2) !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
 }
 
-.desk-sidebar .standard-sidebar-item:hover,
-.desk-sidebar .standard-sidebar-item.selected {
-  background-color: var(--sidebar-select-color-2) !important;
-  color: var(--main-text-color) !important;
-  transform: translateX(4px);
+.desk-sidebar .standard-sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
-.desk-sidebar .standard-sidebar-item:hover a,
-.desk-sidebar .standard-sidebar-item.selected a {
-  color: var(--main-text-color) !important;
-  font-weight: 600 !important;
+.desk-sidebar .standard-sidebar-item:hover a {
+  color: #ffffff !important;
 }
 
 .desk-sidebar .standard-sidebar-item svg.icon-md {
-  height: 32px !important;
-  width: 32px !important;
-  padding: 6px !important;
-  margin: 0 !important;
-  flex-shrink: 0 !important;
-  color: #171717 !important;
+  width: 20px !important;
+  height: 20px !important;
+  stroke: rgba(255, 255, 255, 0.8) !important;
+  fill: none !important;
 }
 
-.desk-sidebar .standard-sidebar-item:hover svg.icon-md,
-.desk-sidebar .standard-sidebar-item.selected svg.icon-md {
-  color: var(--main-text-color) !important;
+.desk-sidebar .standard-sidebar-item:hover svg.icon-md {
+  stroke: #ffffff !important;
 }
 
-[data-page-route="Workspaces"] .standard-sidebar-item .item-anchor {
-  flex-direction: row !important;
-  text-align: left !important;
-  align-items: center !important;
-  gap: 10px !important;
+/* Dark theme adjustments */
+[data-theme="dark"] .desk-sidebar {
+  background: #111827 !important;
+}
+
+[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* ========================================
@@ -469,35 +347,6 @@ input[type="checkbox"]:checked {
   background-color: transparent !important;
   border: 1px solid var(--btn-primary-2) !important;
   padding: 20px 40px !important;
-}
-
-/* ========================================
-   DARK THEME OVERRIDES
-   ======================================== */
-
-[data-theme="dark"] .desk-sidebar {
-  background-color: #1c1c1e;
-  border-right: 1px solid #2c2c2e;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item {
-  color: #ffffff;
-}
-
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item:hover,
-[data-theme="dark"] .desk-sidebar .standard-sidebar-item.selected {
-  background-color: rgba(0, 116, 191, 0.2);
-  color: var(--main-text-color);
-}
-
-[data-theme="dark"] .btn, [data-theme="dark"] .btn-primary {
-  background: rgba(22, 119, 255, 0.9) !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
-}
-
-[data-theme="dark"] .btn-outline, [data-theme="dark"] .btn-secondary {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border-color: rgba(22, 119, 255, 0.4) !important;
 }
 
 /* ========================================
