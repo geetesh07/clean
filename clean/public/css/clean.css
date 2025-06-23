@@ -1070,3 +1070,70 @@ body[data-layout="full-width"] .layout-main-section {
   color: #005fa3 !important;
   border-color: #005fa3 !important;
 }
+
+/* --- Minimal Modern Button Overrides --- */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-default {
+  border-radius: 5px !important;
+  border: none !important;
+  background: #1677ff !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  padding: 7px 18px !important;
+  box-shadow: none !important;
+  transition: background 0.18s, color 0.18s;
+  outline: none !important;
+  cursor: pointer;
+  min-width: 0;
+  line-height: 1.5;
+}
+
+.btn:hover,
+.btn:focus,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-default:hover,
+.btn-default:focus {
+  background: #125fcc !important;
+  color: #fff !important;
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-default:active {
+  background: #0e4a99 !important;
+  color: #fff !important;
+}
+
+.btn-outline,
+.btn-secondary {
+  background: transparent !important;
+  color: #1677ff !important;
+  border: 1.5px solid #1677ff !important;
+  font-weight: 500 !important;
+  box-shadow: none !important;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: #eaf3ff !important;
+  color: #125fcc !important;
+  border-color: #125fcc !important;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #eaf3ff !important;
+  color: #b0b0b0 !important;
+  border: none !important;
+}
