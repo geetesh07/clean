@@ -1014,24 +1014,37 @@ body[data-layout="full-width"] .layout-main-section {
   margin: 2px 0 !important;
 }
 
-/* --- Sleek Modern Button Overrides --- */
+/* --- Ultra-Modern Pro Button Design 2024 --- */
 .btn,
 .btn-primary,
 .btn-secondary,
 .btn-default {
-  border-radius: 8px !important;
+  /* Compact sizing */
+  border-radius: 6px !important;
   border: none !important;
-  background: linear-gradient(90deg, #0074bf 0%, #005fa3 100%) !important;
-  color: #fff !important;
+  padding: 6px 14px !important;
+  font-size: 13px !important;
   font-weight: 500 !important;
-  font-size: 15px !important;
-  padding: 10px 28px !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
-  outline: none !important;
+  line-height: 1.4 !important;
+  
+  /* Glassmorphism effect */
+  background: rgba(22, 119, 255, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  
+  /* Text and cursor */
+  color: #fff !important;
   cursor: pointer;
+  outline: none !important;
+  
+  /* Micro-interaction transitions */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover state with subtle glow */
 .btn:hover,
 .btn:focus,
 .btn-primary:hover,
@@ -1040,100 +1053,90 @@ body[data-layout="full-width"] .layout-main-section {
 .btn-secondary:focus,
 .btn-default:hover,
 .btn-default:focus {
-  background: linear-gradient(90deg, #005fa3 0%, #0074bf 100%) !important;
-  color: #fff !important;
-  box-shadow: 0 4px 16px rgba(0,116,191,0.12);
-  transform: translateY(-2px) scale(1.03);
+  background: rgba(18, 95, 204, 0.9) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 4px 20px rgba(22, 119, 255, 0.25) !important;
+  transform: translateY(-1px) !important;
 }
 
+/* Active/pressed state */
 .btn:active,
 .btn-primary:active,
 .btn-secondary:active,
 .btn-default:active {
-  background: #005fa3 !important;
-  color: #fff !important;
-  box-shadow: 0 1px 4px rgba(0,116,191,0.10);
-  transform: scale(0.98);
+  background: rgba(14, 74, 153, 0.95) !important;
+  transform: translateY(0px) scale(0.98) !important;
+  box-shadow: 0 2px 8px rgba(22, 119, 255, 0.15) !important;
 }
 
-/* Optional: Outlined button style */
-.btn-outline {
-  background: transparent !important;
-  border: 2px solid #0074bf !important;
-  color: #0074bf !important;
-  box-shadow: none;
-}
-
-.btn-outline:hover,
-.btn-outline:focus {
-  background: #0074bf1a !important;
-  color: #005fa3 !important;
-  border-color: #005fa3 !important;
-}
-
-/* --- Minimal Modern Button Overrides --- */
-.btn,
-.btn-primary,
-.btn-secondary,
-.btn-default {
-  border-radius: 5px !important;
-  border: none !important;
-  background: #1677ff !important;
-  color: #fff !important;
-  font-weight: 500 !important;
-  font-size: 15px !important;
-  padding: 7px 18px !important;
-  box-shadow: none !important;
-  transition: background 0.18s, color 0.18s;
-  outline: none !important;
-  cursor: pointer;
-  min-width: 0;
-  line-height: 1.5;
-}
-
-.btn:hover,
-.btn:focus,
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-default:hover,
-.btn-default:focus {
-  background: #125fcc !important;
-  color: #fff !important;
-}
-
-.btn:active,
-.btn-primary:active,
-.btn-secondary:active,
-.btn-default:active {
-  background: #0e4a99 !important;
-  color: #fff !important;
-}
-
+/* Secondary/Outline variant */
 .btn-outline,
 .btn-secondary {
-  background: transparent !important;
+  background: rgba(255, 255, 255, 0.08) !important;
   color: #1677ff !important;
-  border: 1.5px solid #1677ff !important;
-  font-weight: 500 !important;
-  box-shadow: none !important;
+  border: 1px solid rgba(22, 119, 255, 0.3) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
 }
 
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background: #eaf3ff !important;
+  background: rgba(22, 119, 255, 0.12) !important;
+  border-color: rgba(22, 119, 255, 0.5) !important;
   color: #125fcc !important;
-  border-color: #125fcc !important;
+  box-shadow: 0 4px 16px rgba(22, 119, 255, 0.15) !important;
 }
 
+/* Small variant for compact spaces */
+.btn-sm,
+.btn.btn-sm {
+  padding: 4px 10px !important;
+  font-size: 12px !important;
+  border-radius: 4px !important;
+}
+
+/* Large variant for primary actions */
+.btn-lg,
+.btn.btn-lg {
+  padding: 8px 18px !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+}
+
+/* Disabled state */
 .btn:disabled,
 .btn[disabled] {
-  opacity: 0.5;
-  cursor: not-allowed;
-  background: #eaf3ff !important;
-  color: #b0b0b0 !important;
-  border: none !important;
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+  background: rgba(108, 117, 125, 0.3) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Icon buttons */
+.btn-icon {
+  padding: 6px !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Dark theme variants */
+[data-theme="dark"] .btn,
+[data-theme="dark"] .btn-primary {
+  background: rgba(22, 119, 255, 0.9) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-theme="dark"] .btn-outline,
+[data-theme="dark"] .btn-secondary {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(22, 119, 255, 0.4) !important;
 }
