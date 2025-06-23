@@ -8,7 +8,7 @@
   --btn-primary-2: #5e5e5e;
   --btn-secondary-2: #171717;
   --secondary-2: #4a8ce2;
-  --navbar-bg-2: #171717;
+  --navbar-bg-2: #2c2c2c;  /* Lightened navbar color */
   --text-btn-color: white;
   --table-border-color-2: #0073bf57;
   --btn-default-hover-bg: white;
@@ -197,17 +197,30 @@ body[data-layout="full-width"] .layout-main {
 }
 
 input[type="checkbox"] {
-  width: 18px !important;
-  height: 18px !important;
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  width: 16px !important;
+  height: 16px !important;
   border: 1px solid #0074bf !important;
-  border-radius: 4px !important;
-  background: transparent !important;
+  border-radius: 3px !important;
+  background-color: white !important;
   cursor: pointer !important;
+  margin-right: 6px !important;
 }
 
 input[type="checkbox"]:checked {
-  background: #0074bf !important;
+  background-color: #0074bf !important;
   border-color: #0074bf !important;
+  position: relative !important;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  left: 2px;
+  top: -1px;
 }
 
 /* Dark Theme Adjustments */
@@ -494,4 +507,16 @@ input[type="checkbox"]:checked {
     overflow-y: auto;
     scrollbar-color: var(--btn-primary-2) transparent;
   }
+}
+
+/* Hide help section in navbar */
+.navbar .help-link,
+.navbar [data-label="Help"] {
+  display: none !important;
+}
+
+/* Sidebar positioning */
+.layout-side-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
