@@ -117,112 +117,176 @@ body[data-layout="full-width"] .layout-main {
 [data-theme="dark"] .awesomplete li:hover { background-color: #3c3c3e; color: var(--main-text-color); }
 
 /* ========================================
-   CLEAN BUTTON DESIGN
+   PREMIUM BUTTON DESIGN (INSPIRED BY YOUR IMAGE)
    ======================================== */
 
-.btn, .btn-primary, .btn-secondary, .btn-default {
-  border-radius: 6px !important;
+/* Primary Button - Deep Navy */
+.btn, .btn-primary {
+  border-radius: 24px !important;
   border: none !important;
-  padding: 8px 16px !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  line-height: 1.5 !important;
-  background: #2563eb !important;
+  padding: 12px 24px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  background: #1e293b !important;
   color: #ffffff !important;
   cursor: pointer;
   outline: none !important;
-  transition: all 0.15s ease !important;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.25) !important;
   border: 1px solid transparent !important;
+  min-width: fit-content;
 }
 
-.btn:hover, .btn:focus,
-.btn-primary:hover, .btn-primary:focus,
-.btn-secondary:hover, .btn-secondary:focus,
-.btn-default:hover, .btn-default:focus {
-  background: #1d4ed8 !important;
+.btn:hover, .btn:focus, .btn-primary:hover, .btn-primary:focus {
+  background: #0f172a !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 8px 25px 0 rgba(30, 41, 59, 0.35) !important;
+  transform: translateY(-2px) !important;
 }
 
-.btn:active, .btn-primary:active, .btn-secondary:active, .btn-default:active {
-  background: #1e40af !important;
-  color: #ffffff !important;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+.btn:active, .btn-primary:active {
+  background: #0f172a !important;
   transform: translateY(0px) !important;
+  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.25) !important;
 }
 
-/* Secondary/Outline Button */
-.btn-outline, .btn-secondary {
+/* Secondary/Outline Button - White with Navy Border */
+.btn-secondary, .btn-outline, .btn-default {
   background: #ffffff !important;
-  color: #374151 !important;
-  border: 1px solid #d1d5db !important;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  color: #1e293b !important;
+  border: 2px solid #1e293b !important;
+  border-radius: 24px !important;
+  padding: 10px 22px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.1) !important;
 }
 
-.btn-outline:hover, .btn-outline:focus,
-.btn-secondary:hover, .btn-secondary:focus {
-  background: #f9fafb !important;
-  color: #374151 !important;
-  border-color: #9ca3af !important;
+.btn-secondary:hover, .btn-outline:hover, .btn-default:hover,
+.btn-secondary:focus, .btn-outline:focus, .btn-default:focus {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #0f172a !important;
+  box-shadow: 0 8px 25px 0 rgba(30, 41, 59, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Light Gray Button (for options/tabs) */
+.btn-light, .btn-option {
+  background: #e2e8f0 !important;
+  color: #475569 !important;
+  border: none !important;
+  border-radius: 20px !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 8px 0 rgba(71, 85, 105, 0.1) !important;
+}
+
+.btn-light:hover, .btn-option:hover,
+.btn-light:focus, .btn-option:focus {
+  background: #cbd5e1 !important;
+  color: #334155 !important;
+  box-shadow: 0 4px 12px 0 rgba(71, 85, 105, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Icon Buttons - Circular */
+.btn-icon, .btn-circle {
+  padding: 12px !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #1e293b !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.25) !important;
+}
+
+.btn-icon:hover, .btn-circle:hover,
+.btn-icon:focus, .btn-circle:focus {
+  background: #0f172a !important;
+  box-shadow: 0 8px 25px 0 rgba(30, 41, 59, 0.35) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Small Buttons */
+.btn-sm, .btn.btn-sm { 
+  padding: 8px 16px !important; 
+  font-size: 13px !important; 
+  border-radius: 18px !important;
+  font-weight: 500 !important;
+}
+
+/* Large Buttons */
+.btn-lg, .btn.btn-lg { 
+  padding: 16px 32px !important; 
+  font-size: 17px !important; 
+  border-radius: 28px !important;
+  font-weight: 600 !important;
+}
+
+/* Card-style Button */
+.btn-card {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  padding: 16px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-align: left !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
 
-/* Button Sizes */
-.btn-sm, .btn.btn-sm { 
-  padding: 6px 12px !important; 
-  font-size: 13px !important; 
-  border-radius: 5px !important; 
-}
-
-.btn-lg, .btn.btn-lg { 
-  padding: 10px 20px !important; 
-  font-size: 16px !important; 
-  border-radius: 8px !important; 
+.btn-card:hover, .btn-card:focus {
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* Disabled State */
 .btn:disabled, .btn[disabled] {
-  opacity: 0.6 !important;
+  opacity: 0.5 !important;
   cursor: not-allowed !important;
-  background: #e5e7eb !important;
-  color: #9ca3af !important;
-  border-color: #e5e7eb !important;
+  background: #e2e8f0 !important;
+  color: #94a3b8 !important;
+  border-color: #e2e8f0 !important;
   box-shadow: none !important;
   transform: none !important;
-}
-
-/* Icon Button */
-.btn-icon {
-  padding: 8px !important;
-  width: 40px !important;
-  height: 40px !important;
-  border-radius: 6px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Danger/Delete Button */
-.btn-danger {
-  background: #dc2626 !important;
-  color: #ffffff !important;
-}
-
-.btn-danger:hover, .btn-danger:focus {
-  background: #b91c1c !important;
-  color: #ffffff !important;
 }
 
 /* Success Button */
 .btn-success {
   background: #059669 !important;
   color: #ffffff !important;
+  border-radius: 24px !important;
+  box-shadow: 0 4px 14px 0 rgba(5, 150, 105, 0.25) !important;
 }
 
 .btn-success:hover, .btn-success:focus {
   background: #047857 !important;
+  box-shadow: 0 8px 25px 0 rgba(5, 150, 105, 0.35) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Danger Button */
+.btn-danger {
+  background: #dc2626 !important;
   color: #ffffff !important;
+  border-radius: 24px !important;
+  box-shadow: 0 4px 14px 0 rgba(220, 38, 38, 0.25) !important;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+  background: #b91c1c !important;
+  box-shadow: 0 8px 25px 0 rgba(220, 38, 38, 0.35) !important;
+  transform: translateY(-2px) !important;
 }
 
 /* ========================================
