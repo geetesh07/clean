@@ -117,80 +117,112 @@ body[data-layout="full-width"] .layout-main {
 [data-theme="dark"] .awesomplete li:hover { background-color: #3c3c3e; color: var(--main-text-color); }
 
 /* ========================================
-   MODERN BUTTON DESIGN
+   CLEAN BUTTON DESIGN
    ======================================== */
 
 .btn, .btn-primary, .btn-secondary, .btn-default {
   border-radius: 6px !important;
   border: none !important;
-  padding: 6px 14px !important;
-  font-size: 13px !important;
+  padding: 8px 16px !important;
+  font-size: 14px !important;
   font-weight: 500 !important;
-  line-height: 1.4 !important;
-  background: rgba(22, 119, 255, 0.85) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  color: #fff !important;
+  line-height: 1.5 !important;
+  background: #2563eb !important;
+  color: #ffffff !important;
   cursor: pointer;
   outline: none !important;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  position: relative;
-  overflow: hidden;
+  transition: all 0.15s ease !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid transparent !important;
 }
 
 .btn:hover, .btn:focus,
 .btn-primary:hover, .btn-primary:focus,
 .btn-secondary:hover, .btn-secondary:focus,
 .btn-default:hover, .btn-default:focus {
-  background: rgba(18, 95, 204, 0.9) !important;
-  border-color: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 0 4px 20px rgba(22, 119, 255, 0.25) !important;
-  transform: translateY(-1px) !important;
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
 
 .btn:active, .btn-primary:active, .btn-secondary:active, .btn-default:active {
-  background: rgba(14, 74, 153, 0.95) !important;
-  transform: translateY(0px) scale(0.98) !important;
-  box-shadow: 0 2px 8px rgba(22, 119, 255, 0.15) !important;
+  background: #1e40af !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(0px) !important;
 }
 
-/* Button Variants */
+/* Secondary/Outline Button */
 .btn-outline, .btn-secondary {
-  background: rgba(255, 255, 255, 0.08) !important;
-  color: #1677ff !important;
-  border: 1px solid rgba(22, 119, 255, 0.3) !important;
+  background: #ffffff !important;
+  color: #374151 !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
 }
 
 .btn-outline:hover, .btn-outline:focus,
 .btn-secondary:hover, .btn-secondary:focus {
-  background: rgba(22, 119, 255, 0.12) !important;
-  border-color: rgba(22, 119, 255, 0.5) !important;
-  color: #125fcc !important;
-  box-shadow: 0 4px 16px rgba(22, 119, 255, 0.15) !important;
+  background: #f9fafb !important;
+  color: #374151 !important;
+  border-color: #9ca3af !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
 
-.btn-sm, .btn.btn-sm { padding: 4px 10px !important; font-size: 12px !important; border-radius: 4px !important; }
-.btn-lg, .btn.btn-lg { padding: 8px 18px !important; font-size: 14px !important; border-radius: 8px !important; }
+/* Button Sizes */
+.btn-sm, .btn.btn-sm { 
+  padding: 6px 12px !important; 
+  font-size: 13px !important; 
+  border-radius: 5px !important; 
+}
 
+.btn-lg, .btn.btn-lg { 
+  padding: 10px 20px !important; 
+  font-size: 16px !important; 
+  border-radius: 8px !important; 
+}
+
+/* Disabled State */
 .btn:disabled, .btn[disabled] {
-  opacity: 0.4 !important;
+  opacity: 0.6 !important;
   cursor: not-allowed !important;
-  background: rgba(108, 117, 125, 0.3) !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  background: #e5e7eb !important;
+  color: #9ca3af !important;
+  border-color: #e5e7eb !important;
   box-shadow: none !important;
   transform: none !important;
 }
 
+/* Icon Button */
 .btn-icon {
-  padding: 6px !important;
-  width: 32px !important;
-  height: 32px !important;
+  padding: 8px !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 6px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+/* Danger/Delete Button */
+.btn-danger {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+.btn-danger:hover, .btn-danger:focus {
+  background: #b91c1c !important;
+  color: #ffffff !important;
+}
+
+/* Success Button */
+.btn-success {
+  background: #059669 !important;
+  color: #ffffff !important;
+}
+
+.btn-success:hover, .btn-success:focus {
+  background: #047857 !important;
+  color: #ffffff !important;
 }
 
 /* ========================================
