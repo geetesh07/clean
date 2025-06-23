@@ -1013,3 +1013,60 @@ body[data-layout="full-width"] .layout-main-section {
 [data-page-route="Workspaces"] .sidebar-item-container {
   margin: 2px 0 !important;
 }
+
+/* --- Sleek Modern Button Overrides --- */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-default {
+  border-radius: 8px !important;
+  border: none !important;
+  background: linear-gradient(90deg, #0074bf 0%, #005fa3 100%) !important;
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  padding: 10px 28px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-default:hover,
+.btn-default:focus {
+  background: linear-gradient(90deg, #005fa3 0%, #0074bf 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(0,116,191,0.12);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-default:active {
+  background: #005fa3 !important;
+  color: #fff !important;
+  box-shadow: 0 1px 4px rgba(0,116,191,0.10);
+  transform: scale(0.98);
+}
+
+/* Optional: Outlined button style */
+.btn-outline {
+  background: transparent !important;
+  border: 2px solid #0074bf !important;
+  color: #0074bf !important;
+  box-shadow: none;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background: #0074bf1a !important;
+  color: #005fa3 !important;
+  border-color: #005fa3 !important;
+}
